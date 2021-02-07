@@ -29,11 +29,12 @@ namespace PrimerRegistroCompleto
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroCompletoForm));
             this.idLabel = new System.Windows.Forms.Label();
             this.aliasLabel = new System.Windows.Forms.Label();
             this.nombresLabel = new System.Windows.Forms.Label();
-            this.idRolTextBox = new System.Windows.Forms.TextBox();
+            this.idTextBox = new System.Windows.Forms.TextBox();
             this.nombresTextBox = new System.Windows.Forms.TextBox();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
@@ -51,6 +52,8 @@ namespace PrimerRegistroCompleto
             this.costoTextBox = new System.Windows.Forms.TextBox();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.BuscarButton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -85,14 +88,14 @@ namespace PrimerRegistroCompleto
             this.nombresLabel.Text = "Nombres:";
             this.nombresLabel.Click += new System.EventHandler(this.descripcionlabel_Click);
             // 
-            // idRolTextBox
+            // idTextBox
             // 
-            this.idRolTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.idRolTextBox.Location = new System.Drawing.Point(92, 33);
-            this.idRolTextBox.Multiline = true;
-            this.idRolTextBox.Name = "idRolTextBox";
-            this.idRolTextBox.Size = new System.Drawing.Size(120, 23);
-            this.idRolTextBox.TabIndex = 3;
+            this.idTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.idTextBox.Location = new System.Drawing.Point(92, 33);
+            this.idTextBox.Multiline = true;
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(120, 23);
+            this.idTextBox.TabIndex = 3;
             // 
             // nombresTextBox
             // 
@@ -257,12 +260,17 @@ namespace PrimerRegistroCompleto
             this.BuscarButton.Size = new System.Drawing.Size(41, 40);
             this.BuscarButton.TabIndex = 59;
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // RegistroCompletoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 306);
+            this.ClientSize = new System.Drawing.Size(697, 294);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.costoTextBox);
@@ -280,12 +288,13 @@ namespace PrimerRegistroCompleto
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.nombresTextBox);
-            this.Controls.Add(this.idRolTextBox);
+            this.Controls.Add(this.idTextBox);
             this.Controls.Add(this.nombresLabel);
             this.Controls.Add(this.aliasLabel);
             this.Controls.Add(this.idLabel);
             this.Name = "RegistroCompletoForm";
             this.Text = "Registro Completo";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,7 +305,7 @@ namespace PrimerRegistroCompleto
         private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.Label aliasLabel;
         private System.Windows.Forms.Label nombresLabel;
-        private System.Windows.Forms.TextBox idRolTextBox;
+        private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox nombresTextBox;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
@@ -314,6 +323,7 @@ namespace PrimerRegistroCompleto
         private System.Windows.Forms.TextBox costoTextBox;
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Button BuscarButton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
