@@ -178,5 +178,10 @@ namespace PrimerRegistroCompleto
         {
 
         }
+
+        private void NuevoButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
