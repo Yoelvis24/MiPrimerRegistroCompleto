@@ -30,92 +30,85 @@ namespace PrimerRegistroCompleto
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroCompletoForm));
-            this.idRollabel = new System.Windows.Forms.Label();
-            this.fechaCreacionlabel = new System.Windows.Forms.Label();
-            this.descripcionlabel = new System.Windows.Forms.Label();
+            this.idLabel = new System.Windows.Forms.Label();
+            this.aliasLabel = new System.Windows.Forms.Label();
+            this.nombresLabel = new System.Windows.Forms.Label();
             this.idRolTextBox = new System.Windows.Forms.TextBox();
-            this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.descripcionTextBox = new System.Windows.Forms.TextBox();
-            this.EditarButton = new System.Windows.Forms.Button();
+            this.nombresTextBox = new System.Windows.Forms.TextBox();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
-            this.notaLabel = new System.Windows.Forms.Label();
+            this.aliasTextBox = new System.Windows.Forms.TextBox();
+            this.confirmarTextBox = new System.Windows.Forms.TextBox();
+            this.claveTextBox = new System.Windows.Forms.TextBox();
+            this.confirmarLabel = new System.Windows.Forms.Label();
+            this.claveLabel = new System.Windows.Forms.Label();
+            this.rolComboBox = new System.Windows.Forms.ComboBox();
+            this.rolLabel = new System.Windows.Forms.Label();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.activoCheckBox = new System.Windows.Forms.CheckBox();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.costolabel = new System.Windows.Forms.Label();
+            this.costoTextBox = new System.Windows.Forms.TextBox();
+            this.NuevoButton = new System.Windows.Forms.Button();
+            this.BuscarButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // idRollabel
+            // idLabel
             // 
-            this.idRollabel.AutoSize = true;
-            this.idRollabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.idRollabel.Location = new System.Drawing.Point(39, 64);
-            this.idRollabel.Name = "idRollabel";
-            this.idRollabel.Size = new System.Drawing.Size(53, 21);
-            this.idRollabel.TabIndex = 0;
-            this.idRollabel.Text = "Id Rol:";
+            this.idLabel.AutoSize = true;
+            this.idLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.idLabel.Location = new System.Drawing.Point(12, 41);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(21, 15);
+            this.idLabel.TabIndex = 0;
+            this.idLabel.Text = "ID:";
+            this.idLabel.Click += new System.EventHandler(this.idRollabel_Click);
             // 
-            // fechaCreacionlabel
+            // aliasLabel
             // 
-            this.fechaCreacionlabel.AutoSize = true;
-            this.fechaCreacionlabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.fechaCreacionlabel.Location = new System.Drawing.Point(39, 133);
-            this.fechaCreacionlabel.Name = "fechaCreacionlabel";
-            this.fechaCreacionlabel.Size = new System.Drawing.Size(136, 21);
-            this.fechaCreacionlabel.TabIndex = 1;
-            this.fechaCreacionlabel.Text = "Fecha de creación:";
+            this.aliasLabel.AutoSize = true;
+            this.aliasLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.aliasLabel.Location = new System.Drawing.Point(12, 80);
+            this.aliasLabel.Name = "aliasLabel";
+            this.aliasLabel.Size = new System.Drawing.Size(35, 15);
+            this.aliasLabel.TabIndex = 1;
+            this.aliasLabel.Text = "Alias:";
             // 
-            // descripcionlabel
+            // nombresLabel
             // 
-            this.descripcionlabel.AutoSize = true;
-            this.descripcionlabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.descripcionlabel.Location = new System.Drawing.Point(39, 204);
-            this.descripcionlabel.Name = "descripcionlabel";
-            this.descripcionlabel.Size = new System.Drawing.Size(94, 21);
-            this.descripcionlabel.TabIndex = 2;
-            this.descripcionlabel.Text = "Descripción:";
+            this.nombresLabel.AutoSize = true;
+            this.nombresLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nombresLabel.Location = new System.Drawing.Point(12, 131);
+            this.nombresLabel.Name = "nombresLabel";
+            this.nombresLabel.Size = new System.Drawing.Size(59, 15);
+            this.nombresLabel.TabIndex = 2;
+            this.nombresLabel.Text = "Nombres:";
+            this.nombresLabel.Click += new System.EventHandler(this.descripcionlabel_Click);
             // 
             // idRolTextBox
             // 
             this.idRolTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.idRolTextBox.Location = new System.Drawing.Point(181, 61);
+            this.idRolTextBox.Location = new System.Drawing.Point(92, 33);
+            this.idRolTextBox.Multiline = true;
             this.idRolTextBox.Name = "idRolTextBox";
-            this.idRolTextBox.Size = new System.Drawing.Size(200, 29);
+            this.idRolTextBox.Size = new System.Drawing.Size(120, 23);
             this.idRolTextBox.TabIndex = 3;
             // 
-            // fechaDateTimePicker
+            // nombresTextBox
             // 
-            this.fechaDateTimePicker.Location = new System.Drawing.Point(181, 133);
-            this.fechaDateTimePicker.Name = "fechaDateTimePicker";
-            this.fechaDateTimePicker.Size = new System.Drawing.Size(200, 23);
-            this.fechaDateTimePicker.TabIndex = 4;
-            // 
-            // descripcionTextBox
-            // 
-            this.descripcionTextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.descripcionTextBox.Location = new System.Drawing.Point(181, 204);
-            this.descripcionTextBox.Multiline = true;
-            this.descripcionTextBox.Name = "descripcionTextBox";
-            this.descripcionTextBox.Size = new System.Drawing.Size(200, 26);
-            this.descripcionTextBox.TabIndex = 5;
-            // 
-            // EditarButton
-            // 
-            this.EditarButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.EditarButton.Image = ((System.Drawing.Image)(resources.GetObject("EditarButton.Image")));
-            this.EditarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.EditarButton.Location = new System.Drawing.Point(430, 121);
-            this.EditarButton.Name = "EditarButton";
-            this.EditarButton.Size = new System.Drawing.Size(92, 54);
-            this.EditarButton.TabIndex = 7;
-            this.EditarButton.Text = "Editar";
-            this.EditarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.EditarButton.UseVisualStyleBackColor = true;
-            this.EditarButton.Click += new System.EventHandler(this.EditarButton_Click);
+            this.nombresTextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nombresTextBox.Location = new System.Drawing.Point(92, 124);
+            this.nombresTextBox.Multiline = true;
+            this.nombresTextBox.Name = "nombresTextBox";
+            this.nombresTextBox.Size = new System.Drawing.Size(291, 23);
+            this.nombresTextBox.TabIndex = 5;
             // 
             // GuardarButton
             // 
             this.GuardarButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.GuardarButton.Location = new System.Drawing.Point(430, 61);
+            this.GuardarButton.Location = new System.Drawing.Point(313, 218);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(92, 54);
             this.GuardarButton.TabIndex = 8;
@@ -129,7 +122,7 @@ namespace PrimerRegistroCompleto
             this.EliminarButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.EliminarButton.Location = new System.Drawing.Point(430, 181);
+            this.EliminarButton.Location = new System.Drawing.Point(431, 218);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(92, 54);
             this.EliminarButton.TabIndex = 9;
@@ -138,32 +131,158 @@ namespace PrimerRegistroCompleto
             this.EliminarButton.UseVisualStyleBackColor = true;
             this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
-            // notaLabel
+            // aliasTextBox
             // 
-            this.notaLabel.AutoSize = true;
-            this.notaLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.notaLabel.ForeColor = System.Drawing.Color.Red;
-            this.notaLabel.Location = new System.Drawing.Point(331, 238);
-            this.notaLabel.Name = "notaLabel";
-            this.notaLabel.Size = new System.Drawing.Size(191, 15);
-            this.notaLabel.TabIndex = 11;
-            this.notaLabel.Text = "Nota: solo se puede eliminar por Id.";
+            this.aliasTextBox.Location = new System.Drawing.Point(92, 77);
+            this.aliasTextBox.Name = "aliasTextBox";
+            this.aliasTextBox.Size = new System.Drawing.Size(200, 23);
+            this.aliasTextBox.TabIndex = 12;
+            // 
+            // confirmarTextBox
+            // 
+            this.confirmarTextBox.Location = new System.Drawing.Point(358, 176);
+            this.confirmarTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.confirmarTextBox.Name = "confirmarTextBox";
+            this.confirmarTextBox.PasswordChar = '*';
+            this.confirmarTextBox.Size = new System.Drawing.Size(110, 23);
+            this.confirmarTextBox.TabIndex = 47;
+            // 
+            // claveTextBox
+            // 
+            this.claveTextBox.Location = new System.Drawing.Point(92, 173);
+            this.claveTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.claveTextBox.Name = "claveTextBox";
+            this.claveTextBox.PasswordChar = '*';
+            this.claveTextBox.Size = new System.Drawing.Size(152, 23);
+            this.claveTextBox.TabIndex = 46;
+            // 
+            // confirmarLabel
+            // 
+            this.confirmarLabel.AutoSize = true;
+            this.confirmarLabel.Location = new System.Drawing.Point(259, 179);
+            this.confirmarLabel.Name = "confirmarLabel";
+            this.confirmarLabel.Size = new System.Drawing.Size(93, 15);
+            this.confirmarLabel.TabIndex = 45;
+            this.confirmarLabel.Text = "Confirmar Clave";
+            // 
+            // claveLabel
+            // 
+            this.claveLabel.AutoSize = true;
+            this.claveLabel.Location = new System.Drawing.Point(12, 176);
+            this.claveLabel.Name = "claveLabel";
+            this.claveLabel.Size = new System.Drawing.Size(36, 15);
+            this.claveLabel.TabIndex = 44;
+            this.claveLabel.Text = "Clave";
+            // 
+            // rolComboBox
+            // 
+            this.rolComboBox.FormattingEnabled = true;
+            this.rolComboBox.Location = new System.Drawing.Point(548, 88);
+            this.rolComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rolComboBox.Name = "rolComboBox";
+            this.rolComboBox.Size = new System.Drawing.Size(133, 23);
+            this.rolComboBox.TabIndex = 55;
+            // 
+            // rolLabel
+            // 
+            this.rolLabel.AutoSize = true;
+            this.rolLabel.Location = new System.Drawing.Point(518, 91);
+            this.rolLabel.Name = "rolLabel";
+            this.rolLabel.Size = new System.Drawing.Size(24, 15);
+            this.rolLabel.TabIndex = 54;
+            this.rolLabel.Text = "Rol";
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.Location = new System.Drawing.Point(431, 126);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(250, 23);
+            this.emailTextBox.TabIndex = 53;
+            // 
+            // activoCheckBox
+            // 
+            this.activoCheckBox.AutoSize = true;
+            this.activoCheckBox.Location = new System.Drawing.Point(621, 56);
+            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.activoCheckBox.Name = "activoCheckBox";
+            this.activoCheckBox.Size = new System.Drawing.Size(60, 19);
+            this.activoCheckBox.TabIndex = 52;
+            this.activoCheckBox.Text = "Activo";
+            this.activoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Location = new System.Drawing.Point(389, 129);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(36, 15);
+            this.emailLabel.TabIndex = 51;
+            this.emailLabel.Text = "Email";
+            // 
+            // costolabel
+            // 
+            this.costolabel.AutoSize = true;
+            this.costolabel.Location = new System.Drawing.Point(485, 179);
+            this.costolabel.Name = "costolabel";
+            this.costolabel.Size = new System.Drawing.Size(76, 15);
+            this.costolabel.TabIndex = 56;
+            this.costolabel.Text = "Costo x Hora";
+            // 
+            // costoTextBox
+            // 
+            this.costoTextBox.Location = new System.Drawing.Point(567, 176);
+            this.costoTextBox.Name = "costoTextBox";
+            this.costoTextBox.Size = new System.Drawing.Size(114, 23);
+            this.costoTextBox.TabIndex = 57;
+            // 
+            // NuevoButton
+            // 
+            this.NuevoButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoButton.Image")));
+            this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.NuevoButton.Location = new System.Drawing.Point(200, 218);
+            this.NuevoButton.Name = "NuevoButton";
+            this.NuevoButton.Size = new System.Drawing.Size(92, 54);
+            this.NuevoButton.TabIndex = 58;
+            this.NuevoButton.Text = "Nuevo";
+            this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.NuevoButton.UseVisualStyleBackColor = true;
+            // 
+            // BuscarButton
+            // 
+            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
+            this.BuscarButton.Location = new System.Drawing.Point(218, 28);
+            this.BuscarButton.Name = "BuscarButton";
+            this.BuscarButton.Size = new System.Drawing.Size(41, 40);
+            this.BuscarButton.TabIndex = 59;
+            this.BuscarButton.UseVisualStyleBackColor = true;
             // 
             // RegistroCompletoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 337);
-            this.Controls.Add(this.notaLabel);
+            this.ClientSize = new System.Drawing.Size(709, 306);
+            this.Controls.Add(this.BuscarButton);
+            this.Controls.Add(this.NuevoButton);
+            this.Controls.Add(this.costoTextBox);
+            this.Controls.Add(this.costolabel);
+            this.Controls.Add(this.rolComboBox);
+            this.Controls.Add(this.rolLabel);
+            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.activoCheckBox);
+            this.Controls.Add(this.emailLabel);
+            this.Controls.Add(this.confirmarTextBox);
+            this.Controls.Add(this.claveTextBox);
+            this.Controls.Add(this.confirmarLabel);
+            this.Controls.Add(this.claveLabel);
+            this.Controls.Add(this.aliasTextBox);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
-            this.Controls.Add(this.EditarButton);
-            this.Controls.Add(this.descripcionTextBox);
-            this.Controls.Add(this.fechaDateTimePicker);
+            this.Controls.Add(this.nombresTextBox);
             this.Controls.Add(this.idRolTextBox);
-            this.Controls.Add(this.descripcionlabel);
-            this.Controls.Add(this.fechaCreacionlabel);
-            this.Controls.Add(this.idRollabel);
+            this.Controls.Add(this.nombresLabel);
+            this.Controls.Add(this.aliasLabel);
+            this.Controls.Add(this.idLabel);
             this.Name = "RegistroCompletoForm";
             this.Text = "Registro Completo";
             this.ResumeLayout(false);
@@ -173,16 +292,27 @@ namespace PrimerRegistroCompleto
 
         #endregion
 
-        private System.Windows.Forms.Label idRollabel;
-        private System.Windows.Forms.Label fechaCreacionlabel;
-        private System.Windows.Forms.Label descripcionlabel;
+        private System.Windows.Forms.Label idLabel;
+        private System.Windows.Forms.Label aliasLabel;
+        private System.Windows.Forms.Label nombresLabel;
         private System.Windows.Forms.TextBox idRolTextBox;
-        private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
-        private System.Windows.Forms.TextBox descripcionTextBox;
-        private System.Windows.Forms.Button EditarButton;
+        private System.Windows.Forms.TextBox nombresTextBox;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
-        private System.Windows.Forms.Label notaLabel;
+        private System.Windows.Forms.TextBox aliasTextBox;
+        private System.Windows.Forms.TextBox confirmarTextBox;
+        private System.Windows.Forms.TextBox claveTextBox;
+        private System.Windows.Forms.Label confirmarLabel;
+        private System.Windows.Forms.Label claveLabel;
+        private System.Windows.Forms.ComboBox rolComboBox;
+        private System.Windows.Forms.Label rolLabel;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.CheckBox activoCheckBox;
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.Label costolabel;
+        private System.Windows.Forms.TextBox costoTextBox;
+        private System.Windows.Forms.Button NuevoButton;
+        private System.Windows.Forms.Button BuscarButton;
     }
 }
 

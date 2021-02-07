@@ -97,24 +97,24 @@ namespace PrimerRegistroCompleto
             Contexto contexto = new Contexto();
             Roles roles = new Roles();
 
-            if(idRolTextBox.Text == "" || descripcionTextBox.Text == "")
+            if(idRolTextBox.Text == "" || nombresTextBox.Text == "")
             { 
                 MessageBox.Show("Los campos están vacíos, favor de llenarlos", "Error", MessageBoxButtons.OK);
                 return;
             }
 
-            if (!Existe(Convert.ToInt32(idRolTextBox.Text), descripcionTextBox.Text)) //si no existe se añade
+            if (!Existe(Convert.ToInt32(idRolTextBox.Text), nombresTextBox.Text)) //si no existe se añade
             {
                 roles.RolId = Convert.ToInt32(idRolTextBox.Text);
                 roles.FechaCreacion = Convert.ToDateTime(fechaDateTimePicker.Value);
-                roles.Descripcion = descripcionTextBox.Text;
+                roles.Descripcion = nombresTextBox.Text;
                 contexto.Roles.Add(roles);
                 contexto.SaveChanges();
 
                 dataGridView1.DataSource = contexto.Roles.ToList();
                 contexto.Dispose();
                 idRolTextBox.Text = "";
-                descripcionTextBox.Text = "";
+                nombresTextBox.Text = "";
             }
             else
                 MessageBox.Show("Este Rol ya existe");
@@ -122,20 +122,20 @@ namespace PrimerRegistroCompleto
 
         private void EliminarButton_Click(object sender, EventArgs e)
         {
-            if (idRolTextBox.Text == "" || descripcionTextBox.Text == "")
+            if (idRolTextBox.Text == "" || nombresTextBox.Text == "")
             {
                 MessageBox.Show("Los campos están vacíos, favor de llenarlos", "Error", MessageBoxButtons.OK);
                 return;
             }
 
-            if (Existe(Convert.ToInt32(idRolTextBox.Text), descripcionTextBox.Text))
+            if (Existe(Convert.ToInt32(idRolTextBox.Text), nombresTextBox.Text))
             {
                 Contexto contexto = new Contexto();
                 Eliminar(Convert.ToInt32(idRolTextBox.Text));
                 dataGridView1.DataSource = contexto.Roles.ToList();
 
                 idRolTextBox.Text = "";
-                descripcionTextBox.Text = "";
+                nombresTextBox.Text = "";
             }
             else
                 MessageBox.Show("No se puede eliminar un Rol que no existe", "Error", MessageBoxButtons.OK);
@@ -146,27 +146,37 @@ namespace PrimerRegistroCompleto
             Contexto contexto = new Contexto();
             Roles roles = new Roles();
 
-            if (idRolTextBox.Text == "" || descripcionTextBox.Text == "")
+            if (idRolTextBox.Text == "" || nombresTextBox.Text == "")
             {
                 MessageBox.Show("Los campos están vacíos, favor de llenarlos", "Error", MessageBoxButtons.OK);
                 return;
             }
 
-            if (Existe(Convert.ToInt32(idRolTextBox.Text), descripcionTextBox.Text))
+            if (Existe(Convert.ToInt32(idRolTextBox.Text), nombresTextBox.Text))
             {
                 roles.RolId = Convert.ToInt32(idRolTextBox.Text);
                 roles.FechaCreacion = Convert.ToDateTime(fechaDateTimePicker.Value);
-                roles.Descripcion = descripcionTextBox.Text;
+                roles.Descripcion = nombresTextBox.Text;
                 Modificar(roles);
                 contexto.SaveChanges();
                 dataGridView1.DataSource = contexto.Roles.ToList();
                 contexto.Dispose();
 
                 idRolTextBox.Text = "";
-                descripcionTextBox.Text = "";
+                nombresTextBox.Text = "";
             }
             else
                 MessageBox.Show("Este Rol no existe", "Error", MessageBoxButtons.OK);
+        }
+
+        private void idRollabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void descripcionlabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
