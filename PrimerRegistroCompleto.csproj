@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="GestionUsuarios.Db-journal" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="microsoft.entityFrameWorkCore.Design" Version="5.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -36,13 +40,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="GestionPersonas.Db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Folder Include="BLL\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="BLL\" />
+    <None Update="GestionUsuarios.Db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

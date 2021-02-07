@@ -9,7 +9,7 @@ using PrimerRegistroCompleto.DAL;
 namespace PrimerRegistroCompleto.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210123070734_Inicial")]
+    [Migration("20210207042435_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,38 @@ namespace PrimerRegistroCompleto.Migrations
                     b.HasKey("RolId");
 
                     b.ToTable("Roles");
+                });
+
+            modelBuilder.Entity("PrimerRegistroCompleto.Entidades.Usuarios", b =>
+                {
+                    b.Property<int>("UsuarioId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Activo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Alias")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Clave")
+                        .HasColumnType("TEXT");
+
+                    b.Property<float>("Costo")
+                        .HasColumnType("REAL");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nombres")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Rol")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("UsuarioId");
+
+                    b.ToTable("Usuarios");
                 });
 #pragma warning restore 612, 618
         }

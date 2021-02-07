@@ -7,6 +7,7 @@ namespace PrimerRegistroCompleto.Entidades
 {
     public class Usuarios
     {
+        [Key]
         public int UsuarioId { get; set; }
         public float Costo { get; set; }
         public string Alias { get; set; }
