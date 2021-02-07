@@ -192,7 +192,7 @@ namespace PrimerRegistroCompleto
 
         private void NuevoButton_Click(object sender, EventArgs e)
         {
-
+            Limpiar();
         }
 
         private void BuscarButton_Click(object sender, EventArgs e)
