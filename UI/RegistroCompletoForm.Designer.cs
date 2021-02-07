@@ -39,9 +39,7 @@ namespace PrimerRegistroCompleto
             this.EditarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.notaLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // idRollabel
@@ -140,15 +138,6 @@ namespace PrimerRegistroCompleto
             this.EliminarButton.UseVisualStyleBackColor = true;
             this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(39, 265);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(483, 188);
-            this.dataGridView1.TabIndex = 10;
-            // 
             // notaLabel
             // 
             this.notaLabel.AutoSize = true;
@@ -164,9 +153,8 @@ namespace PrimerRegistroCompleto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 480);
+            this.ClientSize = new System.Drawing.Size(580, 337);
             this.Controls.Add(this.notaLabel);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.EditarButton);
@@ -178,7 +166,6 @@ namespace PrimerRegistroCompleto
             this.Controls.Add(this.idRollabel);
             this.Name = "RegistroCompletoForm";
             this.Text = "Registro Completo";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,7 +182,6 @@ namespace PrimerRegistroCompleto
         private System.Windows.Forms.Button EditarButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label notaLabel;
     }
 }
