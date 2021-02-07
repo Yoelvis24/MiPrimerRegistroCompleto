@@ -292,6 +292,7 @@ namespace PrimerRegistroCompleto
             this.Controls.Add(this.nombresLabel);
             this.Controls.Add(this.aliasLabel);
             this.Controls.Add(this.idLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroCompletoForm";
             this.Text = "Registro Completo";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
