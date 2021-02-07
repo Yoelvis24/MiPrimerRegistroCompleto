@@ -40,10 +40,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="BLL\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="GestionUsuarios.Db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
