@@ -197,7 +197,23 @@ namespace PrimerRegistroCompleto
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
+            int id;
+            Usuarios usuarios = new Usuarios();
+            int.TryParse(idTextBox.Text, out id);
 
+            Limpiar();
+
+            usuarios = UsuariosBLL.Buscar(id);
+
+            if (usuarios != null)
+            {
+                MessageBox.Show("Usuario encontrado");
+                LlenarCampos(usuarios);
+            }
+            else
+            {
+                MessageBox.Show("Usuario no encontrado");
+            }
         }
     }
 }
